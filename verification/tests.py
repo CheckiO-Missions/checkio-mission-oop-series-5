@@ -108,7 +108,7 @@ if not '__init__' in vars(ElectricCar):
     raise NotImplementedError("Where is '__init__' method of 'ElectricCar'?")
 
 params4 = signature(ElectricCar.__init__).parameters
-if not all((len(params2) ==  4, 'self' in params4, 'brand' in params4, 'model' in params4, 'battery_capacity' in params4)):
+if not all((len(params4) ==  4, 'self' in params4, 'brand' in params4, 'model' in params4, 'battery_capacity' in params4)):
     raise NotImplementedError("Check the number and names of '__init__' arguments of 'ElectricCar'")
 
 if not "my_electric_car" in USER_GLOBAL:
