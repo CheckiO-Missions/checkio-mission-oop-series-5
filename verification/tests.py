@@ -11,7 +11,7 @@ from inspect import signature
 
 params = signature(Car.__init__).parameters
 if not all((len(params) ==  3, 'self' in params, 'brand' in params, 'model' in params)):
-    raise NotImplementedError("Check the number and names of '__init__' arguments")
+    raise NotImplementedError("Check the number and names of '__init__' arguments of 'Car'")
 
 if not "my_car" in USER_GLOBAL:
     raise NotImplementedError("Where is 'my_car'?")
@@ -105,11 +105,11 @@ if not issubclass(ElectricCar, Car):
     raise TypeError("'ElectricCar' should be a child of 'Car' class")
 
 if not '__init__' in vars(ElectricCar):
-    raise NotImplementedError("Where is '__init__' method?")
+    raise NotImplementedError("Where is '__init__' method of 'ElectricCar'?")
 
 params4 = signature(ElectricCar.__init__).parameters
 if not all((len(params2) ==  4, 'self' in params4, 'brand' in params4, 'model' in params4, 'battery_capacity' in params4)):
-    raise NotImplementedError("Check '__init__' arguments")
+    raise NotImplementedError("Check the number and names of '__init__' arguments of 'ElectricCar'")
 
 if not "my_electric_car" in USER_GLOBAL:
     raise NotImplementedError("Where is 'my_electric_car'?")
